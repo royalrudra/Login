@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="login">
+        <div class="title">Choose Account Type</div>
+        <div class="tab-section">
+          <ul role="tablist" class="tab-nav">
+            <li role="presentation" class="active"><a href="#login" aria-controls="home" role="tab" data-toggle="tab">
+
+              <div class="tab-box">
+                <div class="box-icon">
+                  <img src="user.png" alt="">
+                </div>
+                <div class="box-text">
+                  I am an existing ONLINE USER and I KNOW my login credentials
+                </div>
+                <div class="tick">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                </div>
+              </div><!--tab-box-->
+
+            </a></li>
+            <li role="presentation"><a href="#forgot" aria-controls="profile" role="tab" data-toggle="tab">
+
+              <div class="tab-box">
+                <div class="box-icon">
+                  <img src="forgot-password.png" alt="">
+                </div>
+                <div class="box-text">
+                  I am an existing MEMBER and I DON'T KNOW my login credentials
+                </div>
+                <div class="tick">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                </div>
+              </div><!--tab-box-->
+
+            </a></li>
+            <li role="presentation"><a href="#create-account" aria-controls="messages" role="tab" data-toggle="tab">
+
+              <div class="tab-box">
+                <div class="box-icon">
+                  <img src="create-account.png" alt="">
+                </div>
+                <div class="box-text">
+                  I have NEVER had a membership and I want to create a NEW ACCOUNT
+                </div>
+                <div class="tick">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                </div>
+              </div><!--tab-box-->
+
+            </a></li>
+          </ul>
+        </div><!-- tab-section-->
+
+        <div class="content">
+          <div class="tab-content">
+
+            <div role="tabpanel" class="tab-pane active" id="login">
+              <form class="myform">
+                <label>Email or Username</label>
+                <input type="text" class="form-control" name="email">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <a href="https://csra.recliquecore.com/wp-login.php?action=lostpassword">Forgot username of password?</a>
+                  </div>
+                  <div class="col-sm-4">
+                    <button type="button" class="btn btn-primary pull-right my-btn">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div><!-- login -->
+            <div role="tabpanel" class="tab-pane" id="forgot">
+              <form class="myform">
+                <label>Primary member Last Name OR Barcode</label>
+                <input type="text" class="form-control" name="last_name">
+                <label>Date of Birth</label>
+                <input type="text" class="form-control" name="dob">
+                <iframe style="margin-bottom:30px" src="https://www.google.com/recaptcha/api2/anchor?k=6LfRgQkUAAAAADmveqx-Lllva7vT-bKT6W4xDxhy&amp;co=aHR0cHM6Ly9jc3JhLnJlY2xpcXVlY29yZS5jb206NDQz&amp;hl=en&amp;v=r20170731114946&amp;size=normal&amp;cb=foypgvhqhht9" title="recaptcha widget" width="304" height="78" frameborder="0" scrolling="no" sandbox="allow-forms  allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups allow-popups-to-escape-sandbox"></iframe>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <button type="button" class="btn btn-primary my-btn"><i class="fa fa-search"></i> Find</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="create-account">
+              <form class="myform">
+                <label>Email</label>
+                <input type="text" class="form-control" name="email">
+                <label>Confirm Email</label>
+                <input type="text" class="form-control" name="conf-email">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password">
+                <div class="small">Password must have a capital letter, a lower case letter, a number AND be 6 characters or longer. It can only include the following special characters: _ - $ ! @ # % ^ & + = ?</div>
+                <iframe style="margin-bottom:30px" src="https://www.google.com/recaptcha/api2/anchor?k=6LfRgQkUAAAAADmveqx-Lllva7vT-bKT6W4xDxhy&amp;co=aHR0cHM6Ly9jc3JhLnJlY2xpcXVlY29yZS5jb206NDQz&amp;hl=en&amp;v=r20170731114946&amp;size=normal&amp;cb=foypgvhqhht9" title="recaptcha widget" width="304" height="78" frameborder="0" scrolling="no" sandbox="allow-forms  allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups allow-popups-to-escape-sandbox"></iframe>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <button type="button" class="btn btn-primary my-btn">Create Account</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div><!-- content -->
+      </div>
+    </section><!-- wrapper -->
+  </body>
+</html>
